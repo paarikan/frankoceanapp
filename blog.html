@@ -1,0 +1,79 @@
+<html>
+<head>
+
+<title>paari</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato|Permanent+Marker" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #2EAEF1;
+        color: white;
+    }
+
+    h1 {
+        font-size: 4em;
+        color: black !important;
+    }
+
+    .jumbotron {
+        background-color: #2EAEF1;
+    }
+
+    .jumbotron p {
+        font-size: 3em;
+    }
+
+    .btn {
+        font-size: 25px;
+        color: black;
+        background-color: pink;
+        border: black;
+        border-width: 3px;
+        border-style: solid;
+    }
+
+    video {
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-push-4">
+                <h1>hey, this is paari</h1>
+
+                <br />
+
+                <br />
+                <p>if you are frank ocean, please contact me. i also own the domain paari.app and I would like for you to have it.</p>
+
+                <br />
+                <p><a class="btn btn-lg" href="https://twitter.com/pck____" role="button">dm me on twitter</a></p>  
+
+                <p><a class="btn btn-lg" href="mailto:paari.kandappan@gmail.com" role="button">email me</a></p>  
+            </div>
+            <div class="col-md-4 col-md-pull-8">
+                <video playsinline onclick="toggleMute()" id="video" autoplay muted controls loop src="vine.mp4"></video>
+                <p style="color:white;font-size:1.5em">tap for sound</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+var video=document.getElementById("video") ;   
+
+function toggleMute(){
+    video.muted = !video.muted;
+  }
+</script>
+</body>
+</html>
