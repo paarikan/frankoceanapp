@@ -17,6 +17,36 @@
         color: #2C2057;
     }
 
+    .wave {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 4 20'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateY(-20px);}to {transform:translateY(0);}}%3C/style%3E%3Cpath fill='none' stroke='%232C2057' stroke-width='1' class='st0' d='M.5,0 c 0,5,3,5,3,10 s -3,5,-3,10 c 0,5,3,5,3,10 s -3,5,-3,10'/%3E%3C/svg%3E");
+        width: 4px;
+        height: 250px;
+        position: absolute;
+        top: -5vh;
+        left: 30vw;
+        z-index: -1;
+    }
+
+    .wave2 {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 4 20'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateY(-20px);}to {transform:translateY(0);}}%3C/style%3E%3Cpath fill='none' stroke='%232C2057' stroke-width='1' class='st0' d='M.5,0 c 0,5,3,5,3,10 s -3,5,-3,10 c 0,5,3,5,3,10 s -3,5,-3,10'/%3E%3C/svg%3E");
+        width: 4px;
+        height: 250px;
+        position: absolute;
+        bottom: -5vh;
+        right: 30vw;
+        z-index: -1;
+    }
+
     .statement-header {
         position: absolute;
         top: 5vh;
@@ -76,6 +106,8 @@
 </style>
 </head>
 <body>
+    <div class="wave"></div>
+    <div class="wave2"></div>
     <div class="bar">
         <a href="blog" href="">Blog 🔮</a>
         <a href="https://twitter.com/pck____" target="_blank" href="">Twitter 🕊️</a>
