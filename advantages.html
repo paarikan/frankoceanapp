@@ -1,88 +1,173 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=0.75">
+        
 <head>
 
 <title>paari</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato|Permanent+Marker" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 <style>
     body {
-        background-color: #2EAEF1;
-        color: black;
+        background-color: #F6ABBE;
+        margin: 0;
     }
 
-    h1 {
-        font-size: 4em;
-        color: white !important;
+    .post .header {
+        width: 100vw;
+        padding-bottom: 1.5vh
     }
 
-    .jumbotron {
-        background-color: #2EAEF1;
+    .post h1 {
+        margin-left: 5vw;
+        font-size: 1.5em;
+        font-family: 'Avenir';
+        color: #2C2057;
     }
 
-    .jumbotron p {
-        font-size: 2em;
+    .post p {
+        text-indent: 1em;
     }
 
-    .btn {
-        font-size: 25px;
-        color: black;
-        background-color: pink;
-        border: black;
-        border-width: 3px;
-        border-style: solid;
+    .post p, ul {
+        width: 80vw;
+        margin-left: 5vw;
+        font-family: 'EB Garamond';
+        color: #000;
+        font-size: 1.25em;
+        text-indent: 1em;
     }
 
-    video {
-        width: 100%;
+    .post .date {
+        margin-left: 5vw;
+        font-family: 'IBM Plex Mono';
+        color: #666;
+        font-size: 0.8em;
+    }
+
+    .wave {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 4 20'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateY(-20px);}to {transform:translateY(0);}}%3C/style%3E%3Cpath fill='none' stroke='%232C2057' stroke-width='1' class='st0' d='M.5,0 c 0,5,3,5,3,10 s -3,5,-3,10 c 0,5,3,5,3,10 s -3,5,-3,10'/%3E%3C/svg%3E");
+        width: 4px;
+        height: 250px;
+        position: fixed;
+        top: -5vh;
+        left: 30vw;
+        z-index: -1;
+    }
+
+    .wave2 {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 4 20'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateY(-20px);}to {transform:translateY(0);}}%3C/style%3E%3Cpath fill='none' stroke='%232C2057' stroke-width='1' class='st0' d='M.5,0 c 0,5,3,5,3,10 s -3,5,-3,10 c 0,5,3,5,3,10 s -3,5,-3,10'/%3E%3C/svg%3E");
+        width: 4px;
+        height: 250px;
+        position: fixed;
+        bottom: -5vh;
+        right: 30vw;
+        z-index: -1;
+    }
+
+    .statement-header {
+        position: absolute;
+        top: 5vh;
+        left: 10vw;
+    }
+
+    .statement-footer {
+        position: absolute;
+        bottom: 5vh;
+        right: 10vw;
+    }
+
+    .main-section {
+        top: 10vh;
+        position: absolute;
+        text-align: center;
+        color: #000;
+        font-family: 'EB Garamond';
+        width:100%; 
+        margin:0 auto;
+        background: linear-gradient(to bottom,rgba(1,1,1,0) 50%, #FFF 50%);
+
+    }
+
+    .post {
+        display: block;
+        color: #2C2057;
+        text-decoration: none;
+        text-align: left;
+        width: 80vw;
+        padding-bottom: 100px;
+    }
+    .bar {
+        background-color: #2C2057;
+        position: fixed;
+      top: 10px;
+      right: 30px;
+      width: 0;
+      white-space: nowrap;
+      z-index: 1;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .bar a {
+        text-decoration: none;
+        font-family: 'EB Garamond';
+        font-size: 1em;
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 </style>
 </head>
 <body>
-<div class="jumbotron">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 col-md-push-4">
-                <h1>unfair competitive advantages</h1>
-                <h4>december 23, 2017</h4>
+    <div class="bar">
+        <a href="/">Home 🛋️</a>
+        <a href="blog" href="">Blog 🔮</a>
+        <a href="https://twitter.com/pck____" target="_blank" href="">Twitter 🕊️</a>
+        <a href="mailto:paari.kandappan@gmail.com">Contact 💌</a>
+    </div>
+    <div class="main-section">
+        <div class="post">
+            <div class="header">
+            <h1>Unfair competetive advantages</h1>
+            <span class="date">Dec 23, 20187</span></div>
 
-                <br />
-
-                <br />
-                <p>
-                    The base question when evaluating a high growth business is whether they have an unfair competitive advantage. This is an advantage that raises the barrier of entry for competitors to a point where they are almost certain to avoid entry or be quickly eliminated.
-                </p>
-                <br/>
-
-                <p>
-                    Access to customers can be one of these. Palantir is able to distinguish themselves not because they are the greatest intelligence company in the world, but because they only have to compete with other government contractors. This is a case where the advantage degrades over time. The lack of competition leads to a degradation of services over the time, until the company reverts to the mean of its competitors.
-                </p>
-                <br/>
-
-                <p>Access to talent can be another. In this instance, success begets success, as a winning team formed for one endeavor will be more eager to help each other in the future i.e. the many subsequent ventures of the PayPal mafia.
-                </p>
-
-                <br/>
-
-                <p>Unfair competitive advantages are given not earned. If you could create one, it wouldn't be exclusionary. It can often be something viewed as a disadvantage at first. Black people have been disserviced by the beauty industry and so brands like Fenty and Bevel have been able to flip the personal needs of founders into exclusive market understanding.</p>
-
-                <br/>
-                <p>"Move not unless you see an advantage;  use not your troops unless there is something to be gained; fight not unless the position is critical." - Sun Tzu</p>
-            </div>
-            <div class="col-md-4 col-md-pull-8">
-                <img style="width:100%" src="jordan.jpeg"/>
-                <img style="width:100%" src="bolt.jpg"/>
-                <img style="width:100%" src="phelps.jpg"/>
-                <img style="width:100%" src="gambino.jpg"/>
+            <div style="padding-top: 0.5vh; background-color: #FFF; width: 100vw; display: block">
+                    <p>
+                        The base question when evaluating a high growth business is whether they have an unfair competitive advantage. This is an advantage that raises the barrier of entry for competitors to a point where they are almost certain to avoid entry or be quickly eliminated.
+                    </p>
+                    
+    
+                    <p>
+                        Access to customers can be one of these. Palantir is able to distinguish themselves not because they are the greatest intelligence company in the world, but because they only have to compete with other government contractors. This is a case where the advantage degrades over time. The lack of competition leads to a degradation of services over the time, until the company reverts to the mean of its competitors.
+                    </p>
+                    
+    
+                    <p>Access to talent can be another. In this instance, success begets success, as a winning team formed for one endeavor will be more eager to help each other in the future i.e. the many subsequent ventures of the PayPal mafia.
+                    </p>
+    
+                    
+    
+                    <p>Unfair competitive advantages are given not earned. If you could create one, it wouldn't be exclusionary. It can often be something viewed as a disadvantage at first. Black people have been disserviced by the beauty industry and so brands like Fenty and Bevel have been able to flip the personal needs of founders into exclusive market understanding.</p>
+    
+                    
+                    <p>"Move not unless you see an advantage;  use not your troops unless there is something to be gained; fight not unless the position is critical." - Sun Tzu</p>
             </div>
         </div>
-    </div>
-</div>
+    </div>  
+
+    <div class="wave"></div>
+    <div class="wave2"></div>
 </body>
 </html>
