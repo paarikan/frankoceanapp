@@ -1,94 +1,165 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=0.75">
+        
 <head>
 
 <title>paari</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato|Permanent+Marker" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 <style>
     body {
-        background-color: #2EAEF1;
-        color: black;
+        background-color: #F6ABBE;
+        margin: 0;
     }
 
-    h1 {
-        font-size: 4em;
-        color: white !important;
+    .post h1 {
+        margin-left: 5vw;
+        font-size: 1.5em;
+        font-family: 'Avenir';
+        color: #2C2057;
     }
 
-    .jumbotron {
-        background-color: #2EAEF1;
+    .post p {
+        text-indent: 1em;
     }
 
-    .jumbotron p {
-        font-size: 2em;
+    .post p, ul {
+        width: 80vw;
+        margin-left: 5vw;
+        font-family: 'EB Garamond';
+        color: #000;
+        font-size: 1.25em;
+        text-indent: 1em;
     }
 
-    .btn {
-        font-size: 25px;
-        color: black;
-        background-color: pink;
-        border: black;
-        border-width: 3px;
-        border-style: solid;
+    .post .date {
+        margin-left: 5vw;
+        font-family: 'IBM Plex Mono';
+        color: #666;
+        font-size: 0.8em;
     }
 
-    video {
-        width: 100%;
+    .wave {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 4 20'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateY(-20px);}to {transform:translateY(0);}}%3C/style%3E%3Cpath fill='none' stroke='%232C2057' stroke-width='1' class='st0' d='M.5,0 c 0,5,3,5,3,10 s -3,5,-3,10 c 0,5,3,5,3,10 s -3,5,-3,10'/%3E%3C/svg%3E");
+        width: 4px;
+        height: 250px;
+        position: fixed;
+        top: -5vh;
+        left: 30vw;
+        z-index: -1;
+    }
+
+    .wave2 {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 4 20'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateY(-20px);}to {transform:translateY(0);}}%3C/style%3E%3Cpath fill='none' stroke='%232C2057' stroke-width='1' class='st0' d='M.5,0 c 0,5,3,5,3,10 s -3,5,-3,10 c 0,5,3,5,3,10 s -3,5,-3,10'/%3E%3C/svg%3E");
+        width: 4px;
+        height: 250px;
+        position: fixed;
+        bottom: -5vh;
+        right: 30vw;
+        z-index: -1;
+    }
+
+    .statement-header {
+        position: absolute;
+        top: 5vh;
+        left: 10vw;
+    }
+
+    .statement-footer {
+        position: absolute;
+        bottom: 5vh;
+        right: 10vw;
+    }
+
+    .main-section {
+        top: 10vh;
+        position: absolute;
+        text-align: center;
+        color: #000;
+        font-family: 'EB Garamond';
+        width:100%; 
+        margin:0 auto;
+    }
+
+    .post {
+        display: block;
+        color: #2C2057;
+        text-decoration: none;
+        text-align: left;
+        width: 80vw;
+    }
+    .bar {
+        background-color: #2C2057;
+        position: fixed;
+      top: 10px;
+      right: 30px;
+      width: 0;
+      white-space: nowrap;
+      z-index: 1;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .bar a {
+        text-decoration: none;
+        font-family: 'EB Garamond';
+        font-size: 1em;
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 </style>
 </head>
 <body>
-<div class="jumbotron">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 col-md-push-4">
-                <h1>principles</h1>
-                <h4>july 7, 2018</h4>
+    <div class="wave"></div>
+    <div class="wave2"></div>
+    <div class="bar">
+        <a href="" href="/">Home 🛋️</a>
+        <a href="blog" href="">Blog 🔮</a>
+        <a href="https://twitter.com/pck____" target="_blank" href="">Twitter 🕊️</a>
+        <a href="" href="mailto:paari.kandappan@gmail.com">Contact 💌</a>
+    </div>
+    <div class="main-section">
+        <div class="post">
+            <h1>Principles</h1>
+            <span class="date">Jul 07, 2018</span>
 
-                <br />
-
-                <br />
+            <div style="padding-top: 0.5vh; margin-top: 1vh; background-color: #FFF; width: 100vw; display: block">
                 <p>
                     I'm declaring a set of principles I'd like to guide my decision making and behavior.
                     I've seen people I admire do this and give credit to it for their success.
                     I hope to avoid using this as a performance of vanity by remembering that these are not qualities inherent in myself, but rather standards.
                 </p>
-                <br/>
 
                 <p>
-                    <span style="font-weight:400">My dearest principles are: fitness, frugality, loyalty, awareness, honesty, cheerfulness, and excellence.</span>
-                </p>
-                <br/>
-
-                <p>Their selection is important not just for what they are, but for what was excluded.
+                    <span style="font-weight:400">My dearest principles are: fitness, frugality, loyalty, awareness, honesty, cheerfulness, and excellence.</span> Their selection is important not just for what they are, but for what was excluded.
                     Other principles are not unimportant, but for me, they are secondary to these.
                 </p>
-
                 <br/>
-                <p><span style="font-weight:400">Fitness</span> is the physical foundation necessary for effective performance in life</p>
-                <br/><p>Operating with <span style="font-weight:400">frugality</span> allows me to trade my urges for my goals.</p>
-                <br /><p>Other people are the most valuable resource and their <span style="font-weight:400">loyalty</span> can only be earned in kind. Any opportunity to cultivate it should be seized.</p>
-                <br /><p>The truth is there whether I choose to acknowledge it or not. Practicing without <span style="font-weight:400">awareness</span> is like operating without a sense.</p>
-                <br /><p>I can keep my mental load light by practicing <span style="font-weight:400">honesty</span>.</p>
-                <br /><p>Having fun is the most important thing to me. <span style="font-weight:400">Cheerfulness</span> allows me to generate that internally.</p>
-                <br /><p>The world is more competitive than ever and grows more so. It is only worth doing things I can do with <span style="font-weight:400">excellence</span>.</p>
-                <br />
-            </div>
-            <div class="col-md-4 col-md-pull-8">
-                <img style="width:100%" src="alexander.jpg"/>
-                <img style="width:100%" src="suntzu.jpg"/>
-                <img style="width:100%" src="bhagavadgita.jpg"/>
-                <img style="width:100%" src="eisenhower.jpg"/>
-            </div>
+
+                <ul>
+                    <li><span style="font-weight:400">Fitness</span> is the physical foundation necessary for effective performance in life</p>
+                    <li>Operating with <span style="font-weight:400">frugality</span> allows me to trade my urges for my goals.</p>
+                    <li>Other people are the most valuable resource and their <span style="font-weight:400">loyalty</span> can only be earned in kind. Any opportunity to cultivate it should be seized.</p>
+                    <li>The truth is there whether I choose to acknowledge it or not. Practicing without <span style="font-weight:400">awareness</span> is like operating without a sense.</p>
+                    <li>I can keep my mental load light by practicing <span style="font-weight:400">honesty</span>.</p>
+                    <li>Having fun is the most important thing to me. <span style="font-weight:400">Cheerfulness</span> allows me to generate that internally.</p>
+                    <li>The world is more competitive than ever and grows more so. It is only worth doing things I can do with <span style="font-weight:400">excellence</span>.</p>
+                </ul>
+            </p>
         </div>
-    </div>
-</div>
+    </div>  
 </body>
 </html>
