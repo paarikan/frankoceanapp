@@ -2,83 +2,70 @@
 <head>
 
 <title>paari</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato|Permanent+Marker" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
 <style>
     body {
-        background-color: #2EAEF1;
-        color: white;
+        background-color: #F6ABBE;
     }
 
     h1 {
-        font-size: 4em;
-        color: black !important;
+        font-family: 'Avenir';
+        color: #2C2057;
     }
 
-    .jumbotron {
-        background-color: #2EAEF1;
+    .statement-header {
+        position: absolute;
+        top: 10vh;
+        left: 10vw;
     }
 
-    .jumbotron p {
-        font-size: 2em;
+    .statement-footer {
+        position: absolute;
+        bottom: 10vh;
+        right: 10vw;
     }
 
-    .btn {
-        font-size: 25px;
-        color: black;
-        background-color: #ffc0cb;
-        border: black;
-        border-width: 3px;
-        border-style: solid;
+    .center-text {
+        height: 50vh;
+        top: 30vh;
+        position: absolute;
+        text-align: center;
+        font-size: 1.25em;
+        color: #000;
+        font-family: 'News Cycle';
+        width:100%; 
+        margin:0 auto;
     }
 
-    video {
-        width: 100%;
+    a {
+        color: #000000;
+    }
+    .bar {
+        width: 100vw;
+        height: 10vh;
+        background-color: #F2F2F2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+    }
+    .bar a {
+        text-decoration: underline;
+        font-family: 'News Cycle';
     }
 </style>
 </head>
 <body>
-<div class="jumbotron">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 col-md-push-4">
-                <h1>Hey, I'm Paari</h1>
-
-                <br />
-
-                <br />
-                <p>I make things on the internet and your phone.</p>
-
-                <br />
-                <p>I work at HQ Trivia in NYC. I used to work at Amazon, Uber, and Palantir.</p>
-                <br />
-                <p>I'm from San Jose, CA.</p>
-                <br />
-                <p>I love indie films, modern art, and R&B.</p>
-
-                <br />
-                <p>
-                    <a class="btn btn-lg" target="_blank" href="https://twitter.com/frankoceanapp" role="button">dm me on twitter</a>
-                    <a style="background-color:#f8e675" class="btn btn-lg" target="_blank" href="blog.html" role="button">read my blog</a>
-                </p>  
-                <p>
-                    <a class="btn btn-lg" target="_blank" href="tel:+14086246926">call or text me</a>
-                    <a style="background-color:#f8e675" class="btn btn-lg" target="_blank" href="index.html" role="button">check out my projects</a>
-                </p>
-            </div>
-            <div class="col-md-4 col-md-pull-8">
-                <video playsinline id="video" autoplay muted loop src="spinner.mp4"></video>
-                <img style="width:100%" src="tree.jpg"/>
-            </div>
-        </div>
-    </div>
-</div>
+    <h1 class="statement-header">Paari creates novel experiences</h1>
+    <h1 class="statement-footer">for you.</h1> 
+    <div class="center-text">
+        <img style="height: 25vh; width: auto" src="https://pbs.twimg.com/profile_images/1035171117483347968/ngktYmNS_400x400.jpg"/> <br/>
+        Releasing digital toys like <a href="https://itunes.apple.com/us/app/panda-connects/id1247616470">Panda: Connects</a> and <a href="https://twitter.com/otosounds" target="_blank">@otosounds.</a><br/>
+        At HQ Trivia. Formerly Amazon, Uber, and Palantir.</br>
+        From Joan Didion's California. 
+        <br/>
+        <br/>
+    </div>  
 </body>
 </html>
