@@ -12,6 +12,12 @@
         margin: 0;
     }
 
+    .post .header {
+        background-color: #F6ABBE;
+        width: 100vw;
+        padding-bottom: 1.5vh
+    }
+
     .post h1 {
         margin-left: 5vw;
         font-size: 1.5em;
@@ -89,6 +95,8 @@
         font-family: 'EB Garamond';
         width:100%; 
         margin:0 auto;
+        background: linear-gradient(to bottom, #F6ABBE 50%, #FFF 50%);
+
     }
 
     .post {
@@ -97,6 +105,7 @@
         text-decoration: none;
         text-align: left;
         width: 80vw;
+        padding-bottom: 100px;
     }
     .bar {
         background-color: #2C2057;
@@ -123,8 +132,6 @@
 </style>
 </head>
 <body>
-    <div class="wave"></div>
-    <div class="wave2"></div>
     <div class="bar">
         <a href="" href="/">Home 🛋️</a>
         <a href="blog" href="">Blog 🔮</a>
@@ -133,10 +140,11 @@
     </div>
     <div class="main-section">
         <div class="post">
+            <div class="header">
             <h1>Principles</h1>
-            <span class="date">Jul 07, 2018</span>
+            <span class="date">Jul 07, 2018</span></div>
 
-            <div style="padding-top: 0.5vh; margin-top: 1vh; background-color: #FFF; width: 100vw; display: block">
+            <div style="padding-top: 0.5vh; background-color: #FFF; width: 100vw; display: block">
                 <p>
                     I'm declaring a set of principles I'd like to guide my decision making and behavior.
                     I've seen people I admire do this and give credit to it for their success.
@@ -158,8 +166,11 @@
                     <li>Having fun is the most important thing to me. <span style="font-weight:400">Cheerfulness</span> allows me to generate that internally.</p>
                     <li>The world is more competitive than ever and grows more so. It is only worth doing things I can do with <span style="font-weight:400">excellence</span>.</p>
                 </ul>
-            </p>
+            </div>
         </div>
     </div>  
+
+    <div class="wave"></div>
+    <div class="wave2"></div>
 </body>
 </html>
