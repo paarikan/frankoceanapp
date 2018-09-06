@@ -9,6 +9,7 @@
 <style>
     body {
         background-color: #F6ABBE;
+        margin: 0;
     }
 
     h1 {
@@ -28,7 +29,7 @@
         right: 10vw;
     }
 
-    .center-text {
+    .center-section {
         height: 50vh;
         top: 30vh;
         position: absolute;
@@ -40,32 +41,54 @@
         margin:0 auto;
     }
 
+    .center-text {
+        text-align: left;
+        display: inline-block;
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
     a {
         color: #000000;
     }
     .bar {
-        width: 100vw;
-        height: 10vh;
-        background-color: #F2F2F2;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        text-align: center;
+        background-color: #2C2057;
+        position: fixed;
+      top: 10px;
+      right: 30px;
+      width: 0;
+      white-space: nowrap;
+      z-index: 1;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
     }
     .bar a {
         text-decoration: underline;
-        font-family: 'News Cycle';
+        font-family: 'Avenir';
+        color: #000;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 </style>
 </head>
 <body>
+    <div class="bar">
+        <a style="" href="">Blog 🔮</a>
+        <a style="" href="">Twitter 🕊️</a>
+        <a style="" href="">Contact 💌</a>
+    </div>
     <h1 class="statement-header">Paari creates novel experiences</h1>
     <h1 class="statement-footer">for you.</h1> 
-    <div class="center-text">
-        <img style="height: 25vh; width: auto" src="https://pbs.twimg.com/profile_images/1035171117483347968/ngktYmNS_400x400.jpg"/> <br/>
-        Releasing digital toys like <a href="https://itunes.apple.com/us/app/panda-connects/id1247616470">Panda: Connects</a> and <a href="https://twitter.com/otosounds" target="_blank">@otosounds.</a><br/>
-        At HQ Trivia. Formerly Amazon, Uber, and Palantir.</br>
-        From Joan Didion's California. 
+    <div class="center-section">
+        <img style="height: 25vh; width: auto" src="https://pbs.twimg.com/profile_images/1035171117483347968/ngktYmNS_400x400.jpg"/> <br/><br/>
+        <p class="center-text">
+            Releasing digital toys like <a href="https://itunes.apple.com/us/app/panda-connects/id1247616470">Panda: Connects</a> and <a href="https://twitter.com/otosounds" target="_blank">@otosounds.</a><br/>
+            At HQ Trivia. Formerly Amazon, Uber, and Palantir.</br>
+            From Joan Didion's California. 
+        </p>
         <br/>
         <br/>
     </div>  
